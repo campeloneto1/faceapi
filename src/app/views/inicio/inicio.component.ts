@@ -37,7 +37,7 @@ export class InicioComponent implements OnInit {
     //console.log(faceapi.nets);
 
     this.input = document.getElementById('myImg');
-    this.detections = faceapi.detectAllFaces(this.input).withFaceLandmarks();
+    this.detections = faceapi.detectAllFaces(this.input);
     //this.detectionsWithLandmarks = faceapi.detectAllFaces(this.input).withFaceLandmarks();
     //this.result = faceapi.detectAllFaces(this.input).withFaceLandmarks().withFaceDescriptors();
     //this.detectionsWithExpressions = faceapi.detectAllFaces(this.input).withFaceExpressions();
@@ -47,7 +47,7 @@ export class InicioComponent implements OnInit {
     this.canvas = document.getElementById('myCanvas');
     this.canvas.width = this.input.width;
     this.canvas.height = this.input.height; 
-    //faceapi.draw.drawDetections(this.canvas, this.detectionsForSize);
+    faceapi.draw.drawDetections(this.canvas, this.detectionsForSize);
     //faceapi.draw.drawDetections(this.canvas, this.detectionsForSize);
 
     
